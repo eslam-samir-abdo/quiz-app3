@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-wrapper">
+
+    <!-- Start Screen -->
+    <div id="startScreen" class="start-screen">
+      <h2>Welcome to the Quiz!</h2>
+      <label for="categorySelectStart">Choose Category:</label>
+      <select id="categorySelectStart">
+        <option value="All">All</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+      </select>
+      <button id="startBtn">Start Game</button>
+    </div>
+
+    <!-- Quiz Card (hidden initially) -->
+    <main class="quiz-card hidden">
+      <header class="quiz-top">
+        <div class="right">
+          <div class="count">Questions: <span id="totalCount">0</span></div>
+          <div id="timer">00:15</div>
+        </div>
+      </header>
+
+      <h2 id="question-title">Question Title</h2>
+      <div id="answers" class="answers"></div>
+
+      <div class="controls">
+        <div id="bullets" class="bullets"></div>
+        <button id="nextBtn" class="next-btn">Next</button>
+      </div>
+    </main>
+
+    <!-- Finish Screen -->
+    <div id="finishScreen" class="finish-screen hidden">
+      <h2 id="finalTitle">Quiz Finished</h2>
+      <p id="scoreText"></p>
+      <div class="finish-actions">
+        <button id="restartBtn">Restart</button>
+        <button id="changeCategoryBtn">Change Category</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
